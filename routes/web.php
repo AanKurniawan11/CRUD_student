@@ -3,7 +3,11 @@
 use App\Models\Student;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\kelazController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SignController;
 use App\Models\kelaz;
+use App\Models\Sign;
+// ude App\Http\Controllers\
 use Illuminate\Support\Facades\Route;
 
 
@@ -30,6 +34,9 @@ Route::get('/student/edit/{student}', [StudentController::class, 'edit'])->name(
 Route::get('/student/edit/{student}', [StudentController::class, 'edit'])->name('students.edit');
 Route::put('/student/update/{student}', [StudentController::class, 'update'])->name('students.update');
 Route::get('/student/detail/{student}', [StudentController::class, 'showDetail'])->name('students.detail');
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/signin', [SignController::class, 'index']);
 
 
 

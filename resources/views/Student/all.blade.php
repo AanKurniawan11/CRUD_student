@@ -13,7 +13,7 @@
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">No</th>
                 <th scope="col">nis</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Kelas</th>

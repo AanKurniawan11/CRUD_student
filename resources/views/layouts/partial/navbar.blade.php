@@ -52,17 +52,24 @@
 
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <h3 class="navbar-brand"> Student</h3>
+        <!-- <h3 class="navbar-brand"> Student</h3> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                    <a class="nav-link "  href="/student/all" >Student</a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Kelaz/all">Kelas</a>
+                    <a class="nav-link" href="/kelaz/all">Kelas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "  href="/login" i>Login</a>
                 </li>
             </ul>
         </div>
+      
     </div>
 </nav>
 
