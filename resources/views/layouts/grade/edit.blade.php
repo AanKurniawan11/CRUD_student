@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.partial.dashboard')
 
 @section('content')
 <div class="container mt-4">

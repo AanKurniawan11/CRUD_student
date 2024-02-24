@@ -37,7 +37,7 @@ public function store(Request $request)
     $result = Student::create($validated);
 
     if($result){
-        return redirect('/student/all')->with('success', 'Data student berhasil ditambahkan');
+        return redirect('/dash/siswa/all')->with('success', 'Data student berhasil ditambahkan');
     }
 }
 
@@ -45,12 +45,12 @@ public function destroy($id){
     $student = Student::find($id);
 
     if(!$student){
-        return redirect('/student/all')->with('error', 'Student not found');
+        return redirect('/dash/siswa/all')->with('error', 'Student not found');
     }
 
     $student->delete();
 
-    return redirect('/student/all')->with('success', 'Student deleted successfully');
+    return redirect('/dash/siswa/all')->with('success', 'Student deleted successfully');
 }
 
 
@@ -89,9 +89,9 @@ public function destroy($id){
         $result = $student->update($validatedData); // gunakan metode update pada model
 
         if ($result) {
-            return redirect('/student/all')->with('success', 'Data student berhasil diubah');
+            return redirect('dash/siswa/all')->with('success', 'Data student berhasil diubah');
         } else {
-            return redirect('/student/all')->with('error', 'Gagal mengubah data student');
+            return redirect('dash/siswa/all')->with('error', 'Gagal mengubah data student');
         }
     }
     

@@ -34,22 +34,11 @@
                 <td>{{ $stud->hobi }}</td>
                 <td>
                 <a href="{{ url('/student/detail/' . $stud->id) }}" class="btn btn-primary">Detail</a>
-                    <a href="/student/edit/{{ $stud->id }}" class="btn btn-info">Edit</a>
-                    <button class="btn btn-danger" onclick="confirmDelete({{ $stud->id }})">Delete</button>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
-    <a href="{{ url('/student/add') }}" class="btn btn-info">Add Data</a>
-
 </div>
 
-<script>
-    function confirmDelete(studentId) {
-        if (confirm('apakah anda yakin ?')) {
-            window.location.href = '/student/delete/' + studentId;
-        }
-    }
-</script>
 @endsection

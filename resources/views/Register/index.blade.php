@@ -1,8 +1,32 @@
 @extends('layouts.main')
 
 @section('content')
+<main class="form-signin w-50 m-auto">
+    <form action="/signin/add" method="POST">
+        @csrf
+        <h1 class="h3 mb-3 fw-normal text-center">Register</h1>
 
+        <div class="form-floating">
+            <input type="name" class="form-control" id="floatingName" placeholder="Name" name="name">
+            <label for="floatingName">Name</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="email">
+            <label for="floatingEmail">Email Address</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+            <label for="floatingPassword">Password</label>
+        </div>
 
+        <br>
+        <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
+        <p class="text-center">Already have an account? <a href="/login">Login</a></p>
+    </form>
+</main>
+@endsection
 
 <style>
     body {
@@ -17,11 +41,7 @@
         margin-top: 50px;
     }
 
-    #sig {
-        font-size: 20px; /* Mengurangi ukuran font */
-        font-weight: 600;
-    }
-
+    .form-floating input[type=name],
     .form-floating input[type=email],
     .form-floating input[type=password] {
         border-radius: 20px; /* Membuat sudut input lebih melengkung */
@@ -70,24 +90,3 @@
         text-decoration: underline; /* Garis bawah saat hover */
     }
 </style>
-
-<body>
-    <main class="form-signin">
-        <form method="POST" action="/login/add">
-            @csrf
-            <h1 class="h3 mb-5 fw-bold text-center">Login</h1>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-            </div>
-            <button class="btn btn-primary w-100 py-2 mb-3" type="submit" id="sig">Sign in</button>
-            <p class="mt-5 mb-3 text-center">Belum punya akun? <a href="/signin">register</a></p>
-        </form>
-    </main>
-</body>
-
-@endsection
